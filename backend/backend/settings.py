@@ -127,9 +127,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
 ]
+MEDIA_URL = '/images/'
+
+MEDIA_ROOT = 'static/images'
+
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL = 'base.User'
 
